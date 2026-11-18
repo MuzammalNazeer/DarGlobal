@@ -1,0 +1,15 @@
+node_modules
+frontend/node_modules
+frontend/dist
+.git
+.github
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.vscode
+.idea
+backend/data/chroma_db
+*.log
+.env

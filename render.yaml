@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: darglobal-wasalt-assistant
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: DEFAULT_MODEL
+        value: openrouter/free
+      - key: USE_SENTENCE_TRANSFORMERS
+        value: false
